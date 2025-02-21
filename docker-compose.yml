@@ -19,15 +19,15 @@ services:
       - MYSQL_PASSWORD=pass
 
   postgres:
-    image: postgres:13-alpine
-    restart: always
-    ports:
+     image: postgres:13-alpine
+     restart: always
+     ports:
       - '5432:5432'
-    volumes:
-      - .data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_RANDOM_ROOT_PASSWORD: yes
-      POSTGRES_DB: app
-      POSTGRES_USER: app
-      POSTGRES_PASSWORD: pass
+     volumes:
+        - .data:/var/lib/postgresql/data
+     environment:
+        POSTGRES_RANDOM_ROOT_PASSWORD: yes
+        POSTGRES_DB: app
+        POSTGRES_USER: app
+        POSTGRES_PASSWORD: pass
 
