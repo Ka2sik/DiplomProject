@@ -31,15 +31,11 @@
 
 Для базы MySQL: 
 
-*java -jar artifacts/aqa-shop.jar*
+*java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar*
 
 Для базы PostgreSQL: 
 
-в файле **application.properties** поставить решетку в начале 4 строки 
-и снять решетку в начале 5 строки:
-![Скриншот 21 02 25_16 26 34](https://github.com/user-attachments/assets/31f30496-9b9b-42f2-9802-241b744650e3)
-
-Ввести команду: *java -jar artifacts/aqa-shop.jar*
+*java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar*
 
 3. Проверить работоспособность приложения по адресу: http://localhost:8080/
 4. Запуск тестов: 
@@ -59,5 +55,6 @@
 
 ### Формирование отчёта о тестировании
 
-Подключены отчеты Allure. Для получения отчета в новой вкладке терминала ввести команду: *gradlew allureServe*
+Подключены отчеты Allure. 
+Для получения отчета в новой вкладке терминала ввести команду: *.\gradlew allureServe*
 

@@ -18,6 +18,9 @@ public class DataHelper {
     private static final String cvv = faker.number().digits(3);
     private static final String randomCard = faker.number().digits(16);
 
+    private DataHelper() {
+    }
+
     public static String getFutureMonth() {
         int minMonth = LocalDate.now().getMonthValue();
         int maxMonth = 12;
